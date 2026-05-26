@@ -64,6 +64,7 @@
       width: 1920px;
       height: 1080px;
       transform-origin: center center;
+      opacity: 0;
     }
 
     /* 画布内容：内层 panel 1840×1000，居中（top/left = 40px），56 圆角 + 2px 边框 */
@@ -514,6 +515,7 @@
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
         const scale = Math.min(vw / BASE_W, vh / BASE_H);
         canvas.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
+        canvas.style.opacity = '1';
       }
       window.addEventListener('resize', updateScale);
       updateScale();

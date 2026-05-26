@@ -359,6 +359,7 @@
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
         const scale = Math.min(vw / BASE_W, vh / BASE_H);
         canvas.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+        canvas.style.opacity = "1";
       }
       window.addEventListener("resize", updateScale);
       updateScale();
